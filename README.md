@@ -1,2 +1,8 @@
 # AthenaAccounting
 Website for AthenaAccounting
+
+## Copyright and Licensing
+
+Copyright (c) 2026 ATHENA ACCOUNTING & ADVISORY SERVICES PTY LTD. All rights reserved.
+
+This software and associated documentation files are the proprietary property of ATHENA ACCOUNTING & ADVISORY SERVICES PTY LTD. Commercial use, modification, distribution, or reproduction of this source code, in whole or in part, is strictly prohibited without explicit written permission from the owner.
