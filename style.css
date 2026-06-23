@@ -476,6 +476,31 @@ body {
   color: var(--colour-text-muted);
 }
 
+.footer-legal-links {
+  margin-bottom: 12px;
+  font-size: 13px;
+}
+
+.footer-legal-links a {
+  color: var(--colour-text-muted-light);
+  text-decoration: none;
+}
+
+.footer-legal-links a:hover {
+  color: var(--colour-accent);
+}
+
+.footer-divider {
+  margin: 0 10px;
+  color: var(--colour-text-muted);
+}
+
+.footer-liability {
+  font-size: 12px;
+  color: var(--colour-text-muted);
+  margin-bottom: 8px;
+}
+
 @media (max-width: 720px) {
   .footer-grid {
     grid-template-columns: 1fr 1fr;
