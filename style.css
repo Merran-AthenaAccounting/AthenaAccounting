@@ -475,12 +475,3 @@ body {
   font-size: 13px;
   color: var(--colour-text-muted);
 }
-
-@media (max-width: 720px) {
-  .footer-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-  .footer-about {
-    grid-column: 1 / -1;
-  }
-}
