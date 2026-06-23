@@ -1,0 +1,143 @@
+/* Banner at the top of the page */
+.banner {
+  position: relative;
+  z-index: 100;
+  background: var(--colour-primary);
+  padding: 24px 0;
+  border-bottom: 4px solid var(--colour-accent);
+}
+.banner .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 50px;
+  padding-right: 50px;
+  width: 100%;
+}
+.banner .title-block {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.banner .title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.banner .title h1 {
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--colour-accent);
+  letter-spacing: 0.02em;
+  line-height: 1.25;
+  margin: 0 0 4px 0;
+}
+.banner p {
+  font-size: 15px;
+  color: var(--colour-text-muted-light);
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Logo */
+.logo {
+  width: 54px;
+  height: 54px;
+  background-color: var(--colour-text-muted);
+  color: var(--colour-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  font-weight: bold;
+  border-radius: 50%;
+  flex-shrink: 0;
+  padding-top: 4px;
+  margin-right: 14px;
+}
+
+/* Nav bar */
+.nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 28px;
+}
+.nav-list > li {
+  position: relative;
+}
+.nav-list > li > a {
+  color: var(--colour-text-light);
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 8px 6px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+.nav-list > li > a:hover {
+  color: var(--colour-accent);
+}
+.nav-list > li > a.active {
+  color: var(--colour-accent);
+  border-bottom: 1px solid var(--colour-accent);
+}
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 200px;
+}
+.dropdown-list {
+  margin-top: 15px;
+  background: var(--colour-primary);
+  border: 1px solid var(--colour-accent);
+  border-radius: 6px;
+  padding: 8px 0;
+  list-style: none;
+  z-index: 10;
+}
+.has-dropdown:hover .dropdown {
+  display: block;
+}
+.dropdown-list li a {
+  display: block;
+  padding: 10px 18px;
+  color: var(--colour-text-muted-light);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 400;
+  white-space: nowrap;
+}
+.dropdown-list li a:hover {
+  background: var(--colour-accent-hover);
+  color: var(--colour-accent);
+}
+
+/* Phone number */
+.phone-block {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.phone-block::before {
+  content: "";
+  width: 1px;
+  height: 48px;
+  background: var(--colour-text-muted);
+}
+.phone {
+  color: var(--colour-primary);
+  font-weight: 700;
+  font-size: 16px;
+  padding: 8px 12px;
+  text-decoration: none;
+}

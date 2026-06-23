@@ -1,0 +1,49 @@
+<div class="banner">
+  <div class="container">
+    <div class="title-block">
+      <!-- Placeholder logo -->
+      <div class="logo">A</div>
+      <div class="title">
+        <!-- Title -->
+        <h1>ATHENA</h1>
+        <!-- Subheading -->
+        <p>Accounting & Advisory Services</p>
+      </div>
+    </div>
+
+    <!-- Navigation bar -->
+    <nav class="nav">
+      <ul class="nav-list">
+        <li><a class="{% if page.url == '/' %}active{% endif %}" href="{{ '/' | relative_url }}">Home</a></li>
+        <li class="has-dropdown">
+          <a href="{{ '/services.html' | relative_url }}">Services</a>
+          <div class="dropdown">
+            <ul class="dropdown-list">
+              <li><a href="{{ '/services.html' | relative_url }}#individual-tax">Individual Tax</a></li>
+              <li><a href="{{ '/services.html' | relative_url }}#company-tax">Company Tax</a></li>
+              <li><a href="{{ '/services.html' | relative_url }}#trusts">Trusts</a></li>
+              <li><a href="{{ '/services.html' | relative_url }}#investment-property">Investment Property</a></li>
+              <li><a href="{{ '/services.html' | relative_url }}#bookkeeping">Bookkeeping</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="{{ '/about.html' | relative_url }}">About</a></li>
+        <li class="has-dropdown">
+          <a href="{{ '/contact.html' | relative_url }}">Contact</a>
+          <div class="dropdown">
+            <ul class="dropdown-list">
+              <li><a href="{{ '/services.html' | relative_url }}#call-us">Call Us</a></li>
+              <li><a href="{{ '/services.html' | relative_url }}#email-us">Email Us</a></li>
+              <li><a href="{{ '/services.html' | relative_url }}#visit-us">Visit Us</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="phone-block">
+      <!-- Phone number -->
+      <a class="phone btn-gold" href="tel:0407211713">Call us: 0407-211-713</a>
+    </div>
+  </div>
+</div>

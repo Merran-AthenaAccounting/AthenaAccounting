@@ -1,203 +1,78 @@
-<!DOCTYPE html>
+---
+layout: default
+title: Home
+---
 
-<!-- Language -->
-<html lang="en-AU">
-
-<!-- Head -->
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Website title (the name that appears in the tab of the browser) -->
-  <title>Athena Accounting and Advisory Services</title>
-
-  <!-- Website description -->
-  <meta name="description" content="Athena Accounting and Advisory Services">
-
-  <!-- Style sheet -->
-  <link rel="stylesheet" href="style.css">
-</head>
-
-<!-- Body -->
-<body>
-  <!-- Banner at the top of the screen -->
-  <div class="banner">
-    <div class="container">
-      <div class="title-block">
-        <!-- Placeholder logo -->
-        <div class="logo">A</div>
-        <div class="title">
-          <!-- Title -->
-          <h1>ATHENA</h1>
-          <!-- Subheading -->
-          <p>Accounting & Advisory Services</p>
-        </div>
-      </div>
-
-      <!-- Navigation bar -->
-      <nav class="nav">
-        <ul class="nav-list">
-          <li><a class="active" href="index.html">Home</a></li>
-          <li class="has-dropdown">
-            <a href="services.html">Services</a>
-            <div class="dropdown">
-              <ul class="dropdown-list">
-                <li><a href="services.html#individual-tax">Individual Tax</a></li>
-                <li><a href="services.html#company-tax">Company Tax</a></li>
-                <li><a href="services.html#trusts">Trusts</a></li>
-                <li><a href="services.html#investment-property">Investment Property</a></li>
-                <li><a href="services.html#bookkeeping">Bookkeeping</a></li>
-              </ul>
-            </div>
-          </li>
-          <li><a href="about.html">About</a></li>
-          <li class="has-dropdown">
-            <a href="contact.html">Contact</a>
-            <div class="dropdown">
-              <ul class="dropdown-list">
-                <li><a href="services.html#call-us">Call Us</a></li>
-                <li><a href="services.html#email-us">Email Us</a></li>
-                <li><a href="services.html#visit-us">Visit Us</a></li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-      </nav>
-
-      <div class="right-group">
-        <!-- Phone number -->
-        <div class="phone">
-          <a href="tel:0407211713">Call us: 0407-211-713</a>
-        </div>
-      </div>
-    </div>
+<!-- The front page -->
+<section class="hero">
+  <div class="hero-fade">
+    <p class="hero-eyebrow">Accounting & advisory</p>
+    <h2 class="hero-title">Clear advice.<br>Confident decisions.</h2>
+    <p class="hero-subtitle">Tax, trusts and bookkeeping handled by people who actually explain things.</p>
+    <a href="contact.html" class="btn-gold btn-text">Book a consultation</a>
   </div>
+  <div class="hero-scroll">
+    <a href="#content-start" class="hero-scroll-link">
+      <span>Scroll</span>
+      <div class="hero-scroll-arrow"></div>
+    </a>
+  </div>
+</section>
 
-  <main>
-    <!-- The front page -->
-    <section class="hero">
-      <div class="hero-fade">
-        <p class="hero-eyebrow">Accounting & advisory</p>
-        <h2 class="hero-title">Clear advice.<br>Confident decisions.</h2>
-        <p class="hero-subtitle">Tax, trusts and bookkeeping handled by people who actually explain things.</p>
-        <a href="contact.html" class="hero-cta">Book a consultation</a>
-      </div>
-      <div class="hero-scroll">
-        <a href="#content-start" class="hero-scroll-link">
-          <span>Scroll</span>
-          <div class="hero-scroll-arrow"></div>
+<!-- Content -->
+<section class="page-frame" id="content-start">
+  <div class="container">
+
+    <!-- Services overview -->
+    <div class="section-block">
+      <span class="eyebrow-tag">What we do</span>
+      <h2 class="section-title">Our services</h2>
+      <div class="card-grid">
+        <a href="services.html#individual-tax" class="card">
+          <div class="card-accent"></div>
+          <h3>Individual Tax</h3>
+          <p>Returns, deductions and planning for everyday Australians.</p>
+        </a>
+        <a href="services.html#company-tax" class="card">
+          <div class="card-accent"></div>
+          <h3>Company Tax</h3>
+          <p>Compliance and structuring support for growing businesses.</p>
+        </a>
+        <a href="services.html#trusts" class="card">
+          <div class="card-accent"></div>
+          <h3>Trusts</h3>
+          <p>Trust setup, administration and distribution advice.</p>
+        </a>
+        <a href="services.html#investment-property" class="card">
+          <div class="card-accent"></div>
+          <h3>Investment Property</h3>
+          <p>Depreciation, capital gains and rental income guidance.</p>
+        </a>
+        <a href="services.html#bookkeeping" class="card">
+          <div class="card-accent"></div>
+          <h3>Bookkeeping</h3>
+          <p>Day-to-day records kept accurate, tidy and up to date.</p>
         </a>
       </div>
-    </section>
-    
-    <section class="page-frame" id="content-start">
-      <div class="container">
+    </div>
 
-        <!-- Services overview -->
-        <div class="section-block">
-          <span class="eyebrow-tag">What we do</span>
-          <h2 class="section-title">Our services</h2>
-          <div class="card-grid">
-            <a href="services.html#individual-tax" class="card">
-              <div class="card-accent"></div>
-              <h3>Individual Tax</h3>
-              <p>Returns, deductions and planning for everyday Australians.</p>
-            </a>
-            <a href="services.html#company-tax" class="card">
-              <div class="card-accent"></div>
-              <h3>Company Tax</h3>
-              <p>Compliance and structuring support for growing businesses.</p>
-            </a>
-            <a href="services.html#trusts" class="card">
-              <div class="card-accent"></div>
-              <h3>Trusts</h3>
-              <p>Trust setup, administration and distribution advice.</p>
-            </a>
-            <a href="services.html#investment-property" class="card">
-              <div class="card-accent"></div>
-              <h3>Investment Property</h3>
-              <p>Depreciation, capital gains and rental income guidance.</p>
-            </a>
-            <a href="services.html#bookkeeping" class="card">
-              <div class="card-accent"></div>
-              <h3>Bookkeeping</h3>
-              <p>Day-to-day records kept accurate, tidy and up to date.</p>
-            </a>
-          </div>
-        </div>
-
-        <!-- About teaser -->
-        <div class="section-block">
-          <div class="card about-card">
-            <span class="eyebrow-tag">Who we are</span>
-            <h2 class="section-title">About Athena</h2>
-            <p>We've been helping individuals and businesses make sense of their finances for over a decade. Straightforward advice, no jargon.</p>
-            <a href="about.html" class="text-link">Learn more about us →</a>
-          </div>
-        </div>
-
-        <!-- Contact CTA -->
-        <div class="section-block">
-          <div class="cta-card">
-            <p class="cta-quote">"Ready to get started? Get in touch and we'll get back to you within one business day."</p>
-            <a href="contact.html" class="hero-cta">Contact us</a>
-          </div>
-        </div>
-
+    <!-- About teaser -->
+    <div class="section-block">
+      <div class="card about-card">
+        <span class="eyebrow-tag">Who we are</span>
+        <h2 class="section-title">About Athena</h2>
+        <p>We've been helping individuals and businesses make sense of their finances for over a decade. Straightforward advice, no jargon.</p>
+        <a href="about.html" class="text-link">Learn more about us →</a>
       </div>
-    </section>
+    </div>
 
-    <footer class="site-footer">
-      <div class="container footer-grid">
-        <div class="footer-about">
-          <div class="footer-logo">
-            <div class="logo">A</div>
-            <div class="title">
-              <h1>ATHENA</h1>
-              <p>Accounting & Advisory Services</p>
-            </div>
-          </div>
-          <p class="footer-text">Straightforward tax and advisory support for individuals, businesses and trusts across Australia.</p>
-        </div>
-
-        <div class="footer-links">
-          <h4>Services</h4>
-          <ul>
-            <li><a href="services.html#individual-tax">Individual Tax</a></li>
-            <li><a href="services.html#company-tax">Company Tax</a></li>
-            <li><a href="services.html#trusts">Trusts</a></li>
-            <li><a href="services.html#investment-property">Investment Property</a></li>
-            <li><a href="services.html#bookkeeping">Bookkeeping</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-links">
-          <h4>Company</h4>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-contact">
-          <h4>Get in touch</h4>
-          <p><a href="tel:0407211713">0407-211-713</a></p>
-          <p><a href="contact.html">Send an enquiry</a></p>
-        </div>
+    <!-- Contact CTA -->
+    <div class="section-block">
+      <div class="cta-card">
+        <p class="cta-quote">"Ready to get started? Get in touch and we'll get back to you within one business day."</p>
+        <a href="contact.html" class="btn-gold btn-text">Contact us</a>
       </div>
+    </div>
 
-      <div class="footer-bottom">
-        <div class="footer-legal-links">
-          <a href="privacy.html">Privacy Policy</a>
-          <span class="footer-divider">|</span>
-          <a href="https://www.tpb.gov.au/help-and-advice-using-tax-agent" target="_blank" rel="noopener">Taxpayer & Tax Agent Obligations</a>
-        </div>
-        <p class="footer-liability">Liability limited by a scheme approved under Professional Standards Legislation.</p>
-        <p>© 2026 Athena Accounting & Advisory Services. All rights reserved.</p>
-      </div>
-    </footer>
-  </main>
-</body>
-
-</html>
+  </div>
+</section>

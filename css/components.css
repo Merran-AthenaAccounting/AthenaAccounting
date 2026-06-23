@@ -1,0 +1,118 @@
+.btn-gold {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--colour-accent);
+  border-radius: 6px;
+  transition: background 0.2s ease;
+}
+.btn-gold:hover {
+  background: #e0bd4d;
+}
+.btn-text {
+  color: var(--colour-primary);
+  font-weight: 700;
+  font-size: 15px;
+  padding: 12px 22px;
+  text-decoration: none;
+}
+
+.section-block {
+  margin: 60px 0;
+}
+
+.eyebrow-tag {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--colour-accent);
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: var(--colour-primary);
+  line-height: 1.25;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: var(--colour-background);
+  border: 1px solid var(--colour-border);
+  border-radius: 14px;
+  padding: 24px 20px;
+  text-decoration: none;
+  color: var(--colour-text);
+  display: block;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.card:hover {
+  border-color: var(--colour-accent);
+  transform: translateY(-3px);
+}
+
+.card-accent {
+  width: 32px;
+  height: 4px;
+  background: var(--colour-accent);
+  border-radius: 2px;
+  margin-bottom: 14px;
+}
+
+.card h3 {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--colour-primary);
+}
+
+.card p {
+  font-size: 14px;
+  color: var(--colour-text-muted);
+  line-height: 1.5;
+}
+
+.about-card {
+  padding: 36px 32px;
+}
+
+.about-card p {
+  color: var(--colour-text-muted);
+  margin: 12px 0 16px;
+  max-width: 600px;
+}
+
+.text-link {
+  color: var(--colour-primary);
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 15px;
+  border-bottom: 1px solid var(--colour-accent);
+  padding-bottom: 2px;
+}
+
+.cta-card {
+  background: var(--colour-primary);
+  border-radius: 14px;
+  padding: 48px 32px;
+  text-align: center;
+}
+
+.cta-quote {
+  font-size: 19px;
+  font-style: italic;
+  color: var(--colour-background);
+  max-width: 480px;
+  margin: 0 auto 24px;
+  line-height: 1.5;
+}
