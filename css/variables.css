@@ -1,0 +1,17 @@
+/* Global variables which control how the website looks */
+:root {
+  /* Brand Colours */
+  --colour-primary: #0C0C0D;
+  --colour-accent: #D4AF37;
+  --colour-accent-hover: #d4af371a;
+
+  /* Text Colours */
+  --colour-text: #0C0C0D;
+  --colour-text-muted: #6b7280;
+  --colour-text-muted-light: #b0bcc3;
+  --colour-text-light: #d8e4e9;
+
+  /* Surface Colours */
+  --colour-border: #e8e3d8;
+  --colour-background: #fcf9f4;
+}
