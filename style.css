@@ -1,8 +1,10 @@
 /* Global variables which control how the website looks */
 :root {
   /* Brand Colours */
-  --colour-primary: #1a1f2e;
+  /* --colour-primary: #1a1f2e; */
+  --colour-primary: #0C0C0D;
   --colour-accent: #D4AF37;
+  /* --colour-accent: #C9A84C; */
   --colour-accent-hover: #d4af371a;
 
   /* Text Colours */
