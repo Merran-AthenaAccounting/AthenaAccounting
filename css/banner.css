@@ -1,7 +1,10 @@
 /* Banner at the top of the page */
 .banner {
-  position: relative;
-  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
   background: var(--colour-primary);
   padding: 24px 0;
   border-bottom: 4px solid var(--colour-accent);
