@@ -30,8 +30,7 @@
   line-height: 1.6;
 }
 
-.footer-links h4,
-.footer-contact h4 {
+.footer-links h4 {
   color: var(--colour-accent);
   font-size: 14px;
   font-weight: 700;
@@ -48,21 +47,15 @@
   margin-bottom: 10px;
 }
 
-.footer-links a,
-.footer-contact a {
+.footer-links a {
   color: var(--colour-text-muted-light);
   text-decoration: none;
   font-size: 15px;
   transition: color 0.2s ease;
 }
 
-.footer-links a:hover,
-.footer-contact a:hover {
+.footer-links a:hover {
   color: var(--colour-accent);
-}
-
-.footer-contact p {
-  margin-bottom: 10px;
 }
 
 .footer-bottom {
