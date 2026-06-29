@@ -13,7 +13,7 @@ title: Home
         <!-- Image on the left -->
         <div class="card-display-image">
           <img 
-            src="Hi I'm Merran.jpg"
+            src="{{ "/Hi I'm Merran.jpg" | relative_url }}"
             alt="Merran Phegan"
             class="card-display-portrait"
           />
@@ -51,7 +51,7 @@ title: Home
 
     <!-- Back to home link -->
     <div class="section-block" style="text-align: center;">
-      <a href="index" class="text-link">Back to home</a>
+      <a href="{{ "/" | relative_url }}" class="text-link">Back to home</a>
     </div>
   </div>
 </section>
