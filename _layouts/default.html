@@ -22,26 +22,9 @@
 <body>
   {% include banner.html %}
 
-  <script>
-    // 1. Select the banner element
-    const banner = document.getElementById('banner-id');
-
-    // 2. Create an observer to watch for height changes
-    const resizeObserver = new ResizeObserver(entries => {
-      for (let entry of entries) {
-        // Get the exact, real-time height of the banner
-        const bannerHeight = entry.target.offsetHeight;
-        
-        // Apply that height as top margin to the body
-        document.body.style.marginTop = `${bannerHeight}px`;
-      }
-    });
-
-    // 3. Start observing the banner
-    resizeObserver.observe(banner);
-  </script>
-
   <div class="accent-extender"></div>
+
+  <script src="script.js" defer></script>
 
   <main>
     {{ content }}
