@@ -17,14 +17,6 @@
   margin-top: 30px;
 }
 
-.section-title {
-  font-size: 28px;
-  font-weight: 700;
-  margin-bottom: 24px;
-  color: var(--colour-primary);
-  line-height: 1.25;
-}
-
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -59,7 +51,11 @@
 }
 
 .section-block h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 24px;
   color: var(--colour-primary);
+  line-height: 1.25;
 }
 
 .section-block h3 {
@@ -67,6 +63,13 @@
   font-weight: 600;
   margin-bottom: 8px;
   color: var(--colour-primary);
+}
+
+.section-block h4 {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--colour-accent);
+  margin-bottom: 20px;
 }
 
 .section-block :where(a, p, span, li) {
@@ -89,12 +92,37 @@
 }
 
 .text-link {
+  position: relative;
+  display: inline-block;
   color: var(--colour-primary);
   font-weight: 600;
   text-decoration: none;
   font-size: 15px;
-  border-bottom: 1px solid var(--colour-accent);
+  border-bottom: 0;
   padding-bottom: 2px;
+  transition: color 0.2s ease;
+}
+
+.text-link:hover {
+  color: var(--colour-accent);
+}
+
+.text-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 3px;
+  width: 100%;
+  height: 1px;
+  opacity: 0.5;
+  background: var(--colour-accent);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.text-link:hover::after {
+  opacity: 1;
+  transform: scaleX(1);
 }
 
 .dark-card {
