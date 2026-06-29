@@ -5,8 +5,21 @@
 .divider {
   border: none;
   height: 1px;
-  background-color: var(--colour-border);
   width: 100%;
+  background-color: var(--colour-border);
+}
+.divider-vertical {
+  border: none;
+  width: 1px;
+  align-self: stretch;
+  background-color: var(--colour-border);
+}
+@media (max-width: 768px) {
+  .divider-vertical {
+    height: 1px;
+    width: 100%;
+    align-self: auto;
+  }
 }
 
 .section-block:has(+ .divider) {
@@ -58,6 +71,10 @@
   line-height: 1.25;
 }
 
+.section-block h2:has(+ h3, + h4) {
+  margin-bottom: 8px;
+}
+
 .section-block h3 {
   font-size: 17px;
   font-weight: 600;
@@ -101,6 +118,9 @@
   border-bottom: 0;
   padding-bottom: 2px;
   transition: color 0.2s ease;
+}
+.text-link.text-link-inline {
+  margin: 0px;
 }
 
 .text-link:hover {
@@ -191,6 +211,50 @@
   text-transform: uppercase;
   color: var(--colour-accent);
   margin-bottom: 12px;
+}
+
+.card-display {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  background: var(--white);
+  border-radius: 14px;
+  padding: 40px;
+  border: 1px solid var(--colour-border);
+}
+.card-display-image {
+  flex: 0 0 300px;
+  max-width: 300px;
+}
+.card-display-portrait {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 1px solid var(--colour-border);
+  display: block;
+}
+@media (max-width: 768px) {
+  .card-display {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 24px;
+    gap: 30px;
+  }
+  .card-display-image {
+    flex: 0 0 220px;
+    max-width: 220px;
+  }
+}
+@media (max-width: 480px) {
+  .card-display {
+    padding: 20px 16px;
+  }
+  .card-display-image {
+    flex: 0 0 180px;
+    max-width: 180px;
+  }
 }
 
 .btn-gold {
