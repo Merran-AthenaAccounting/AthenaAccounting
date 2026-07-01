@@ -87,7 +87,15 @@
   display: flex;
   align-items: center;
 }
-.nav-list > li > a {
+
+/* Wraps the link + arrow for dropdown items so they read as one row */
+.nav-item-row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.nav-link {
   color: var(--colour-text-light);
   text-decoration: none;
   font-size: 16px;
@@ -97,13 +105,14 @@
   border-bottom: 2px solid transparent;
   transition: color 0.2s ease, border-color 0.2s ease;
 }
-.nav-list > li > a:hover {
+.nav-link:hover {
   color: var(--colour-accent);
 }
-.nav-list > li > a.active {
+.nav-link.active {
   color: var(--colour-accent);
   border-bottom: 1px solid var(--colour-accent);
 }
+
 .dropdown {
   display: none;
   position: absolute;
@@ -138,17 +147,17 @@
   color: var(--colour-accent);
 }
 
-/* Dropdown caret toggle button - only shown/used on mobile */
+/* Dropdown arrow - hidden on desktop, hover handles the dropdown there.
+   Starts as a flat line, becomes a downward chevron once opened. */
 .dropdown-toggle {
   display: none;
   background: transparent;
   border: none;
-  padding: 8px;
-  margin-left: 2px;
+  padding: 0;
   cursor: pointer;
   position: relative;
-  width: 28px;
-  height: 28px;
+  width: 26px;
+  height: 26px;
   flex-shrink: 0;
 }
 .dropdown-toggle::before {
@@ -222,7 +231,16 @@
   transform: translateY(-7px) rotate(-45deg);
 }
 
-/* Mobile */
+/* Dividers between mobile menu items - reuses the site's .divider component,
+   hidden by default so it has no effect on the desktop layout. */
+.nav-divider {
+  display: none;
+  margin: 0;
+}
+
+/* ---------------------------------------------- */
+/* Mobile / collapsed nav                          */
+/* ---------------------------------------------- */
 @media (max-width: 900px) {
   .banner .container {
     padding-left: 24px;
@@ -253,10 +271,14 @@
     display: flex;
   }
 
+  .nav-menu {
+    padding: 0 24px;
+  }
+
   .nav {
     flex: none;
     justify-content: flex-start;
-    padding: 12px 24px 0;
+    padding: 12px 0 0;
   }
 
   .nav-list {
@@ -268,29 +290,27 @@
   .nav-list > li {
     flex-direction: column;
     align-items: stretch;
-    border-bottom: 1px solid var(--colour-border);
-  }
-  .nav-list > li:last-child {
-    border-bottom: none;
   }
 
-  .nav-list > li > a {
+  .nav-divider {
+    display: block;
+  }
+
+  .nav-link {
     display: block;
     padding: 14px 4px;
     border-bottom: none;
   }
-  .nav-list > li > a.active {
+  .nav-link.active {
     border-bottom: none;
   }
 
-  /* row that holds the link + caret for dropdown items */
-  .has-dropdown {
-    display: flex;
-    flex-wrap: wrap;
+  /* row that holds the link + arrow for dropdown items */
+  .nav-item-row {
     justify-content: space-between;
   }
-  .has-dropdown > a {
-    flex: 1;
+  .nav-item-row .nav-link {
+    flex: 0 1 auto;
   }
 
   .dropdown-toggle {
@@ -323,7 +343,7 @@
   }
 
   .phone-block {
-    padding: 20px 24px 24px;
+    padding: 20px 0 24px;
   }
   .phone-block::before {
     display: none;

@@ -1,8 +1,8 @@
 (function () {
   var MOBILE_BREAKPOINT = 900;
 
-  var banner = document.getElementById('banner-id');
-  if (!banner) return;
+  var bannerEl = document.getElementById('banner-id');
+  if (!bannerEl) return;
 
   var toggle = document.getElementById('nav-toggle');
   var menu = document.getElementById('nav-menu');
@@ -44,13 +44,20 @@
     toggleMenu();
   });
 
-  // Dropdown caret toggles (mobile-only interaction; on desktop the
-  // caret is hidden and hover handles the dropdown instead).
+  // The whole row (arrow + the empty space beside it) toggles the
+  // submenu. Only a click directly on the link text is left alone,
+  // so it navigates normally.
   dropdownItems.forEach(function (item) {
-    var caret = item.querySelector('.dropdown-toggle');
-    if (!caret) return;
+    var row = item.querySelector('.nav-item-row');
+    var toggleBtn = item.querySelector('.dropdown-toggle');
+    if (!row) return;
 
-    caret.addEventListener('click', function (e) {
+    row.addEventListener('click', function (e) {
+      if (e.target.closest('a')) {
+        // Clicked the submenu name itself - let it navigate.
+        return;
+      }
+
       e.preventDefault();
       e.stopPropagation();
 
@@ -66,11 +73,11 @@
       });
 
       item.classList.toggle('dropdown-open', !isOpen);
-      caret.setAttribute('aria-expanded', String(!isOpen));
+      if (toggleBtn) toggleBtn.setAttribute('aria-expanded', String(!isOpen));
     });
   });
 
-  // Close the menu after a nav or phone link is clicked (mobile only)
+  // Close the mobile menu after a nav or phone link is clicked
   menu.querySelectorAll('a').forEach(function (link) {
     link.addEventListener('click', function () {
       if (window.innerWidth <= MOBILE_BREAKPOINT) {
@@ -81,7 +88,7 @@
 
   // Close when clicking outside the banner
   document.addEventListener('click', function (e) {
-    if (!banner.contains(e.target)) {
+    if (!bannerEl.contains(e.target)) {
       closeMenu();
     }
   });

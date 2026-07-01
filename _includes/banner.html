@@ -34,16 +34,19 @@
         <ul class="nav-list">
           <li>
             <a
-              class="{% if page.url == '/' %}active{% endif %}"
+              class="nav-link {% if page.url == '/' %}active{% endif %}"
               href="{{ '/' | relative_url }}"
             >Home</a>
+            <hr class="divider nav-divider" aria-hidden="true" />
           </li>
           <li class="has-dropdown">
-            <a
-              class="{% if page.url == '/services' %}active{% endif %}"
-              href="{{ '/services' | relative_url }}"
-            >Services</a>
-            <button type="button" class="dropdown-toggle" aria-expanded="false" aria-label="Toggle Services submenu"></button>
+            <div class="nav-item-row">
+              <a
+                class="nav-link {% if page.url == '/services' %}active{% endif %}"
+                href="{{ '/services' | relative_url }}"
+              >Services</a>
+              <button type="button" class="dropdown-toggle" aria-expanded="false" aria-label="Toggle Services submenu"></button>
+            </div>
             <div class="dropdown">
               <ul class="dropdown-list">
                 <li><a href="{{ '/services' | relative_url }}#accounting-services">Accounting Services</a></li>
@@ -52,19 +55,23 @@
                 <li><a href="{{ '/services' | relative_url }}#finance-broking">Finance Broking</a></li>
               </ul>
             </div>
+            <hr class="divider nav-divider" aria-hidden="true" />
           </li>
           <li>
             <a
-              class="{% if page.url == '/about' or page.url == '/privacy' or page.url == '/terms' %}active{% endif %}"
+              class="nav-link {% if page.url == '/about' or page.url == '/privacy' or page.url == '/terms' %}active{% endif %}"
               href="{{ '/about' | relative_url }}"
             >About</a>
+            <hr class="divider nav-divider" aria-hidden="true" />
           </li>
           <li class="has-dropdown">
-            <a
-              class="{% if page.url == '/contact' or page.url == '/checklist' %}active{% endif %}"
-              href="{{ '/contact' | relative_url }}"
-            >Contact</a>
-            <button type="button" class="dropdown-toggle" aria-expanded="false" aria-label="Toggle Contact submenu"></button>
+            <div class="nav-item-row">
+              <a
+                class="nav-link {% if page.url == '/contact' or page.url == '/checklist' %}active{% endif %}"
+                href="{{ '/contact' | relative_url }}"
+              >Contact</a>
+              <button type="button" class="dropdown-toggle" aria-expanded="false" aria-label="Toggle Contact submenu"></button>
+            </div>
             <div class="dropdown">
               <ul class="dropdown-list">
                 <li><a href="{{ '/contact' | relative_url }}#content-start">Call Us</a></li>
@@ -73,9 +80,12 @@
                 <li><a href="{{ '/contact' | relative_url }}#content-start">Visit Us</a></li>
               </ul>
             </div>
+            <!-- no divider after the last item; the phone block has its own -->
           </li>
         </ul>
       </nav>
+
+      <hr class="divider nav-divider nav-divider-phone" aria-hidden="true" />
 
       <div class="phone-block">
         <!-- Phone number -->
