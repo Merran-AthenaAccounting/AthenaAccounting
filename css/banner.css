@@ -16,12 +16,14 @@
   padding-left: 50px;
   padding-right: 50px;
   width: 100%;
+  position: relative;
 }
 .banner .title-block {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
 .banner .title {
   display: flex;
@@ -42,7 +44,6 @@
   line-height: 1.4;
   margin: 0;
 }
-
 /* Logo */
 .logo {
   width: 54px;
@@ -60,6 +61,14 @@
   margin-right: 14px;
 }
 
+/* Nav + phone wrapper (collapses into the mobile menu together) */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
+}
+
 /* Nav bar */
 .nav {
   flex: 1;
@@ -70,9 +79,13 @@
   display: flex;
   list-style: none;
   gap: 28px;
+  margin: 0;
+  padding: 0;
 }
 .nav-list > li {
   position: relative;
+  display: flex;
+  align-items: center;
 }
 .nav-list > li > a {
   color: var(--colour-text-light);
@@ -125,11 +138,41 @@
   color: var(--colour-accent);
 }
 
+/* Dropdown caret toggle button - only shown/used on mobile */
+.dropdown-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  padding: 8px;
+  margin-left: 2px;
+  cursor: pointer;
+  position: relative;
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+}
+.dropdown-toggle::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid var(--colour-text-light);
+  border-bottom: 2px solid var(--colour-text-light);
+  transform: translate(-50%, -65%) rotate(45deg);
+  transition: transform 0.2s ease;
+}
+.has-dropdown.dropdown-open .dropdown-toggle::before {
+  transform: translate(-50%, -35%) rotate(225deg);
+}
+
 /* Phone number */
 .phone-block {
   display: flex;
   align-items: center;
   gap: 20px;
+  flex-shrink: 0;
 }
 .phone-block::before {
   content: "";
@@ -143,4 +186,151 @@
   font-size: 16px;
   padding: 8px 12px;
   text-decoration: none;
+}
+
+/* Hamburger toggle button - hidden on desktop */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 42px;
+  height: 42px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  flex-shrink: 0;
+  padding: 0;
+  z-index: 2;
+}
+.nav-toggle-bar {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--colour-text-light);
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+.nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .banner .container {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    flex: none;
+    flex-direction: column;
+    align-items: stretch;
+    background: var(--colour-primary);
+    border-bottom: 4px solid var(--colour-accent);
+    max-height: calc(100vh - 100%);
+    overflow-y: auto;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+  }
+
+  .nav-menu.open {
+    display: flex;
+  }
+
+  .nav {
+    flex: none;
+    justify-content: flex-start;
+    padding: 12px 24px 0;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+  }
+
+  .nav-list > li {
+    flex-direction: column;
+    align-items: stretch;
+    border-bottom: 1px solid var(--colour-border);
+  }
+  .nav-list > li:last-child {
+    border-bottom: none;
+  }
+
+  .nav-list > li > a {
+    display: block;
+    padding: 14px 4px;
+    border-bottom: none;
+  }
+  .nav-list > li > a.active {
+    border-bottom: none;
+  }
+
+  /* row that holds the link + caret for dropdown items */
+  .has-dropdown {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .has-dropdown > a {
+    flex: 1;
+  }
+
+  .dropdown-toggle {
+    display: block;
+  }
+
+  .dropdown {
+    display: none;
+    position: static;
+    transform: none;
+    width: 100%;
+  }
+  .has-dropdown:hover .dropdown {
+    /* disable hover-open on touch/mobile, use click toggle instead */
+    display: none;
+  }
+  .has-dropdown.dropdown-open .dropdown {
+    display: block;
+  }
+
+  .dropdown-list {
+    margin-top: 0;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 0 0 8px 12px;
+  }
+  .dropdown-list li a {
+    padding: 10px 6px;
+  }
+
+  .phone-block {
+    padding: 20px 24px 24px;
+  }
+  .phone-block::before {
+    display: none;
+  }
+  .phone-block .phone {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
 }

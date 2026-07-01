@@ -1,8 +1,11 @@
 <div class="banner" id="banner-id">
   <div class="container">
     <div class="title-block">
-      <!-- Placeholder logo -->
-      <div class="logo">A</div>
+      <img
+        src="assets/logo.svg"
+        alt="A"
+        class="logo"
+      />
       <div class="title">
         <!-- Title -->
         <h1>ATHENA</h1>
@@ -11,49 +14,75 @@
       </div>
     </div>
 
-    <!-- Navigation bar -->
-    <nav class="nav">
-      <ul class="nav-list">
-        <li><a
-          class="{% if page.url == '/' %}active{% endif %}"
-          href="{{ '/' | relative_url }}"
-        >Home</a></li>
-        <li class="has-dropdown"><a
-          class="{% if page.url == '/services' %}active{% endif %}"
-          href="{{ '/services' | relative_url }}"
-        >Services</a>
-          <div class="dropdown">
-            <ul class="dropdown-list">
-              <li><a href="{{ '/services' | relative_url }}#accounting-services">Accounting Services</a></li>
-              <li><a href="{{ '/services' | relative_url }}#bookkeeping">Bookkeeping</a></li>
-              <li><a href="{{ '/services' | relative_url }}#property-investors">Property Investors</a></li>
-              <li><a href="{{ '/services' | relative_url }}#finance-broking">Finance Broking</a></li>
-            </ul>
-          </div>
-        </li>
-        <li><a
-          class="{% if page.url == '/about' or page.url == '/privacy' or page.url == '/terms' %}active{% endif %}"
-          href="{{ '/about' | relative_url }}"
-        >About</a></li>
-        <li class="has-dropdown"><a
-          class="{% if page.url == '/contact' or page.url == '/checklist' %}active{% endif %}"
-          href="{{ '/contact' | relative_url }}"
-        >Contact</a>
-          <div class="dropdown">
-            <ul class="dropdown-list">
-              <li><a href="{{ '/contact' | relative_url }}#content-start">Call Us</a></li>
-              <li><a href="{{ '/contact' | relative_url }}#content-start">Email Us</a></li>
-              <li><a href="{{ '/contact' | relative_url }}#message">Message Us</a></li>
-              <li><a href="{{ '/contact' | relative_url }}#content-start">Visit Us</a></li>
-            </ul>
-          </div>
-        </li>
-      </ul>
-    </nav>
+    <!-- Hamburger toggle (visible on small screens only) -->
+    <button
+      type="button"
+      class="nav-toggle"
+      id="nav-toggle"
+      aria-expanded="false"
+      aria-controls="nav-menu"
+      aria-label="Toggle navigation menu"
+    >
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
 
-    <div class="phone-block">
-      <!-- Phone number -->
-      <a class="phone btn-gold" href="tel:0407211713">Call us: 0407 211 713</a>
+    <!-- Nav bar + phone number, grouped so they can collapse into one menu -->
+    <div class="nav-menu" id="nav-menu">
+      <nav class="nav">
+        <ul class="nav-list">
+          <li>
+            <a
+              class="{% if page.url == '/' %}active{% endif %}"
+              href="{{ '/' | relative_url }}"
+            >Home</a>
+          </li>
+          <li class="has-dropdown">
+            <a
+              class="{% if page.url == '/services' %}active{% endif %}"
+              href="{{ '/services' | relative_url }}"
+            >Services</a>
+            <button type="button" class="dropdown-toggle" aria-expanded="false" aria-label="Toggle Services submenu"></button>
+            <div class="dropdown">
+              <ul class="dropdown-list">
+                <li><a href="{{ '/services' | relative_url }}#accounting-services">Accounting Services</a></li>
+                <li><a href="{{ '/services' | relative_url }}#bookkeeping">Bookkeeping</a></li>
+                <li><a href="{{ '/services' | relative_url }}#property-investors">Property Investors</a></li>
+                <li><a href="{{ '/services' | relative_url }}#finance-broking">Finance Broking</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a
+              class="{% if page.url == '/about' or page.url == '/privacy' or page.url == '/terms' %}active{% endif %}"
+              href="{{ '/about' | relative_url }}"
+            >About</a>
+          </li>
+          <li class="has-dropdown">
+            <a
+              class="{% if page.url == '/contact' or page.url == '/checklist' %}active{% endif %}"
+              href="{{ '/contact' | relative_url }}"
+            >Contact</a>
+            <button type="button" class="dropdown-toggle" aria-expanded="false" aria-label="Toggle Contact submenu"></button>
+            <div class="dropdown">
+              <ul class="dropdown-list">
+                <li><a href="{{ '/contact' | relative_url }}#content-start">Call Us</a></li>
+                <li><a href="{{ '/contact' | relative_url }}#content-start">Email Us</a></li>
+                <li><a href="{{ '/contact' | relative_url }}#message">Message Us</a></li>
+                <li><a href="{{ '/contact' | relative_url }}#content-start">Visit Us</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="phone-block">
+        <!-- Phone number -->
+        <a class="phone btn-gold" href="tel:0407211713">Call us: 0407 211 713</a>
+      </div>
     </div>
   </div>
 </div>
+
+<script src="{{ '/scripts/banner.js' | relative_url }}" defer></script>
