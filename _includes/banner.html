@@ -38,7 +38,7 @@
           <li class="has-dropdown">
             <div class="nav-item-row">
               <a
-                class="nav-link {% if page.url == '/services' %}active{% endif %}"
+                class="nav-link {% if page.url == '/services/' %}active{% endif %}"
                 href="{{ '/services' | relative_url }}"
               >Services</a>
               <button type="button" class="dropdown-toggle" aria-expanded="false" aria-label="Toggle Services submenu"></button>
@@ -55,7 +55,7 @@
           </li>
           <li>
             <a
-              class="nav-link {% if page.url == '/about' or page.url == '/privacy' or page.url == '/terms' %}active{% endif %}"
+              class="nav-link {% if page.url == '/about/' or page.url == '/privacy/' or page.url == '/terms/' %}active{% endif %}"
               href="{{ '/about' | relative_url }}"
             >About</a>
             <hr class="divider nav-divider" aria-hidden="true" />
@@ -63,7 +63,7 @@
           <li class="has-dropdown">
             <div class="nav-item-row">
               <a
-                class="nav-link {% if page.url == '/contact' or page.url == '/checklist' %}active{% endif %}"
+                class="nav-link {% if page.url == '/contact/' or page.url == '/checklist/' %}active{% endif %}"
                 href="{{ '/contact' | relative_url }}"
               >Contact</a>
               <button type="button" class="dropdown-toggle" aria-expanded="false" aria-label="Toggle Contact submenu"></button>
