@@ -44,21 +44,27 @@
   line-height: 1.4;
   margin: 0;
 }
+
 /* Logo */
 .logo {
-  width: 54px;
-  height: 54px;
-  background-color: var(--colour-text-muted);
-  color: var(--colour-primary);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 26px;
-  font-weight: bold;
+  width: 64px;
+  height: 64px;
   border-radius: 50%;
+  margin-right: 16px;
   flex-shrink: 0;
-  padding-top: 4px;
-  margin-right: 14px;
+  text-decoration: none;
+}
+
+.logo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+
+  mix-blend-mode: lighten;
 }
 
 /* Nav + phone wrapper (collapses into the mobile menu together) */
