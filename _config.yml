@@ -1,1 +1,20 @@
+title: Athena Accounting & Advisory Services
+description: Chartered accountant and registered tax agent in Hornsby, Sydney. Tax, accounting, bookkeeping, Xero and property investor advice for individuals and small businesses.
+url: "https://www.athenaaccounting.com.au"
+lang: en_AU
 permalink: pretty
+logo: /assets/logo.svg
+author: Merran Phegan
+social:
+  name: Athena Accounting & Advisory Services
+  links:
+    - https://www.linkedin.com/in/merranphegan/
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+exclude:
+  - serve.sh
+  - README.md
+  - LICENSE
+  - Gemfile
+  - Gemfile.lock

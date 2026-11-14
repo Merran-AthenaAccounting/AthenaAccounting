@@ -8,11 +8,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Website title (the name that appears in the tab of the browser) -->
-  <title>Athena Accounting and Advisory Services</title>
+  <!-- Page title, description and social sharing tags (generated per page by jekyll-seo-tag) -->
+  {% seo %}
 
-  <!-- Website description -->
-  <meta name="description" content="Athena Accounting and Advisory Services">
+  <!-- Business details for Google (name, address, phone) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AccountingService",
+    "name": "Athena Accounting & Advisory Services",
+    "legalName": "Athena Accounting & Advisory Services Pty Ltd",
+    "url": "https://www.athenaaccounting.com.au/",
+    "logo": "https://www.athenaaccounting.com.au/assets/logo.svg",
+    "image": "https://www.athenaaccounting.com.au/assets/merran-phegan.jpg",
+    "telephone": "+61 407 211 713",
+    "email": "merran@athenaaccounting.com.au",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Level 1, 22-28 Edgeworth David Avenue",
+      "addressLocality": "Hornsby",
+      "addressRegion": "NSW",
+      "postalCode": "2077",
+      "addressCountry": "AU"
+    },
+    "areaServed": ["Hornsby", "Hornsby Shire", "Sydney", "Australia"],
+    "founder": { "@type": "Person", "name": "Merran Phegan", "jobTitle": "Principal, Chartered Accountant" },
+    "sameAs": ["https://www.linkedin.com/in/merranphegan/"]
+  }
+  </script>
 
   <!-- Style sheet -->
   <link rel="stylesheet" href="{{ '/css/style.css' | relative_url }}">
